@@ -25,13 +25,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-100 text-slate-900">
       <header className="absolute top-6 z-20 w-full">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border-b border-white/70 bg-white/70 px-6 py-2 backdrop-blur-md sm:px-8">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border-b border-white/70 bg-white/70 px-4 py-0 backdrop-blur-md sm:px-6">
           <div className="flex items-center gap-3">
-            <div className="relative h-20 w-35 overflow-visible">
+            <div className="relative h-16 w-28 overflow-visible">
               <Image
                 src={logo}
                 alt="Freezely"
-                className="absolute -left-6 -top-10 h-44 w-50"
+                className="absolute -left-4 -top-8 h-36 w-44"
               />
             </div>
           </div>

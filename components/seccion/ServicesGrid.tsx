@@ -14,10 +14,10 @@ const services = [
 export function ServicesGrid() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0">
-        <Image src={bgImage} alt="Servicios HVAC" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/35" />
-      </div>
+        <div className="absolute inset-0">
+          <Image src={bgImage} alt="Servicios HVAC" fill className="object-cover" />
+          <div className="absolute inset-0 bg-black/45" />
+        </div>
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-16 lg:flex-row">
         <div className="flex-1 text-white">
           <h3 className="text-3xl font-semibold italic md:text-4xl">
@@ -31,7 +31,7 @@ export function ServicesGrid() {
               ✔
             </span>
             <span className="text-lg md:text-xl">
-              Atención directa con nuestro equipo técnico
+              Asesoría directa con nuestro equipo
             </span>
           </div>
           <a

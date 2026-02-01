@@ -1,5 +1,5 @@
 import Image from "next/image";
-import vrfImage from "@/app/productos/WhatsApp Image 2026-01-31 at 21.20.36.jpeg";
+import vrfImage from "@/app/productos/WhatsApp Image 2026-02-01 at 01.00.17.jpeg";
 
 export function VrfSection() {
   return (

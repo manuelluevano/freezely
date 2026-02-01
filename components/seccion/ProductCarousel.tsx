@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { productImages } from "@/lib/products";
 
 const CARD_WIDTH = 380;
@@ -11,6 +11,7 @@ export function ProductCarousel() {
   const [activeImage, setActiveImage] = useState<StaticImageData | null>(null);
   const [index, setIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
@@ -28,17 +29,21 @@ export function ProductCarousel() {
     return () => clearInterval(timer);
   }, [isDesktop]);
 
+  useEffect(() => {
+    if (!trackRef.current) return;
+    trackRef.current.scrollTo({
+      left: index * (CARD_WIDTH + CARD_GAP),
+      behavior: "smooth",
+    });
+  }, [index]);
+
   return (
     <section className="bg-white py-16">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="relative overflow-hidden md:overflow-hidden">
+        <div className="relative">
           <div
-            className="flex snap-x snap-mandatory items-center gap-6 overflow-x-auto pb-2 transition-transform duration-700 ease-out md:gap-8 md:overflow-hidden"
-            style={{
-              transform: isDesktop
-                ? `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`
-                : "none",
-            }}
+            ref={trackRef}
+            className="flex snap-x snap-mandatory items-center gap-6 overflow-x-auto pb-2 md:gap-8"
           >
             {productImages.map((item) => (
               <button
