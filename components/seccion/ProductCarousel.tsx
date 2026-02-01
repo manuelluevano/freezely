@@ -10,29 +10,41 @@ const CARD_GAP = 32;
 export function ProductCarousel() {
   const [activeImage, setActiveImage] = useState<StaticImageData | null>(null);
   const [index, setIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const updateIsDesktop = () => setIsDesktop(mediaQuery.matches);
+    updateIsDesktop();
+    mediaQuery.addEventListener("change", updateIsDesktop);
+    return () => mediaQuery.removeEventListener("change", updateIsDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % productImages.length);
     }, 60000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <section className="bg-white py-16">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden md:overflow-hidden">
           <div
-            className="flex items-center gap-8 transition-transform duration-700 ease-out"
+            className="flex snap-x snap-mandatory items-center gap-6 overflow-x-auto pb-2 transition-transform duration-700 ease-out md:gap-8 md:overflow-hidden"
             style={{
-              transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
+              transform: isDesktop
+                ? `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`
+                : "none",
             }}
           >
             {productImages.map((item) => (
               <button
                 key={item.alt}
                 type="button"
-                className="relative h-64 w-[380px] flex-shrink-0 overflow-hidden rounded-3xl shadow-lg md:h-72"
+                className="relative h-60 w-[280px] flex-shrink-0 snap-start overflow-hidden rounded-3xl shadow-lg sm:h-64 sm:w-[320px] md:h-72 md:w-[380px]"
                 onClick={() => setActiveImage(item.src)}
               >
                 <Image
