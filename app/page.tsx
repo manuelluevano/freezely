@@ -1,3 +1,6 @@
+ "use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import fondo from "@/app/assets/fondo.png";
 import logo from "@/app/assets/logo.png";
@@ -17,10 +20,12 @@ const navItems = [
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-slate-100 text-slate-900">
       <header className="absolute top-6 z-20 w-full">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border-b border-white/70 bg-white/60 px-8 py-1 backdrop-blur-md">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border-b border-white/70 bg-white/70 px-6 py-2 backdrop-blur-md sm:px-8">
           <div className="flex items-center gap-3">
             <div className="relative h-20 w-35 overflow-visible">
               <Image
@@ -41,7 +46,37 @@ export default function Home() {
               </a>
             ))}
           </nav>
+          <button
+            type="button"
+            className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-slate-800 shadow-sm transition hover:bg-white md:hidden"
+            aria-label="Abrir menú"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"
+              />
+            </svg>
+          </button>
         </div>
+        {menuOpen && (
+          <div className="mx-auto mt-3 w-full max-w-6xl px-6 md:hidden">
+            <div className="rounded-3xl border border-white/70 bg-white/90 p-4 text-base font-semibold text-slate-800 shadow-lg backdrop-blur-md">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block rounded-2xl px-4 py-3 transition hover:bg-slate-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </header>
 
       <main>
