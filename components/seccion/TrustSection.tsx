@@ -1,5 +1,5 @@
 import Image from "next/image";
-import trustImage from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26.jpeg";
+import trustImage from "@/app/productos/WhatsApp Image 2026-02-04 at 10.44.09.jpeg";
 
 export function TrustSection() {
   return (

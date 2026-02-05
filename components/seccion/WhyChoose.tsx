@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bannerImage from "@/app/productos/WhatsApp Image 2026-01-31 at 21.20.36.jpeg";
+import bannerImage from "@/app/productos/WhatsApp Image 2026-02-04 at 10.45.03.jpeg";
 
 const reasons = [
   "Servicio técnico certificado",
@@ -31,31 +31,30 @@ export function WhyChoose() {
             </div>
           ))}
         </div>
+      </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl shadow-lg">
-          <div className="relative h-40 w-full md:h-48">
-            <Image
-              src={bannerImage}
-              alt="Agenda tu servicio"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-blue-900/60" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white">
-              <p className="text-xl font-semibold md:text-2xl">
-                Agenda tu servicio ahora
-              </p>
-              <a
-                href="https://wa.me/523315350444"
-                className="inline-flex rounded-full bg-red-600 px-6 py-2 text-base font-semibold text-white shadow-md transition hover:bg-red-700"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactar
-              </a>
-            </div>
+      <div className="mt-12 w-full overflow-hidden shadow-lg">
+        <div className="relative h-40 w-full md:h-48">
+          <Image
+            src={bannerImage}
+            alt="Agenda tu servicio"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-blue-900/60" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white">
+            <p className="text-xl font-semibold md:text-2xl">
+              Agenda tu servicio ahora
+            </p>
+            <a
+              href="https://wa.me/523315350444"
+              className="inline-flex rounded-full bg-red-600 px-6 py-2 text-base font-semibold text-white shadow-md transition hover:bg-red-700"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contactar
+            </a>
           </div>
-          <div className="h-4 bg-slate-200/60" />
         </div>
       </div>
     </section>

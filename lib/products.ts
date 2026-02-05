@@ -1,20 +1,19 @@
-import img1 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.25 (1).jpeg";
-import img2 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.25 (2).jpeg";
-import img3 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.25.jpeg";
-import img4 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26 (1).jpeg";
-import img5 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26 (2).jpeg";
-import img6 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26 (3).jpeg";
-import img7 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26 (4).jpeg";
-import img8 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26 (5).jpeg";
-import img9 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.26.jpeg";
-import img10 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.27 (1).jpeg";
-import img11 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.27 (2).jpeg";
-import img12 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.27 (3).jpeg";
-import img13 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.27 (4).jpeg";
-import img14 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.27.jpeg";
-import img15 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.28 (1).jpeg";
-import img16 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.28 (2).jpeg";
-import img17 from "@/app/productos/WhatsApp Image 2026-01-31 at 21.07.28.jpeg";
+import img1 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.47.jpeg";
+import img2 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.47 (1).jpeg";
+import img3 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.47 (2).jpeg";
+import img4 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.48.jpeg";
+import img5 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.48 (1).jpeg";
+import img6 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.48 (2).jpeg";
+import img7 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.48 (3).jpeg";
+import img8 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.49.jpeg";
+import img9 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.49 (1).jpeg";
+import img10 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.49 (2).jpeg";
+import img11 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.49 (3).jpeg";
+import img12 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.49 (4).jpeg";
+import img13 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.50.jpeg";
+import img14 from "@/app/productos/WhatsApp Image 2026-02-04 at 00.55.50 (1).jpeg";
+import img15 from "@/app/productos/WhatsApp Image 2026-02-04 at 10.44.09.jpeg";
+import img16 from "@/app/productos/WhatsApp Image 2026-02-04 at 10.45.03.jpeg";
 
 export const productImages = [
   { src: img1, alt: "Producto 1" },
@@ -33,5 +32,4 @@ export const productImages = [
   { src: img14, alt: "Producto 14" },
   { src: img15, alt: "Producto 15" },
   { src: img16, alt: "Producto 16" },
-  { src: img17, alt: "Producto 17" },
 ];
